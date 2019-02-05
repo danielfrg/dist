@@ -5,9 +5,10 @@ git_tag = $(subst v,,$(shell git describe --tags --abbrev=0))
 VERSION ?= $(git_tag)
 
 TMP_DIR = ./tmp
-DIST_DIR = $(TMP)/$(NAME)
 ENV_DIR = $(TMP_DIR)/condaenv
+PIP = $(ENV_DIR)/bin/pip
 OUTPUT = $(TMP_DIR)/$(NAME)-$(VERSION).tar.gz
+DIST_DIR = $(TMP_DIR)/$(NAME)
 
 all: help
 
@@ -17,10 +18,10 @@ env: ## Create the environemnt
 	conda create -y -p $(ENV_DIR) -c conda-forge python=3.6 notebook jupyterlab
 
 deps: ## Install dependencies
-	$(ENV_DIR)/bin/pip install -r requirements.txt
+	$(PIP) install -r requirements.txt
 
 fixes: ## Fix shit
-	$(ENV_DIR)/bin/pip uninstall -y wrapt
+	$(PIP) uninstall -y wrapt
 	conda install -y -p $(ENV_DIR) -c conda-forge wrapt=1.11.1
 
 pack: ##
