@@ -5,6 +5,7 @@ statsmodels
 matplotlib
 seaborn
 plotly
+altair
 bokeh
 pydot
 scikit-learn
