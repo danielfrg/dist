@@ -6,8 +6,9 @@ Dependencies are in `environment.yml`.
 
 ## Dependencies
 
-Needs to be executed in the conda root environment.
-Install deps on that environment:
+This needs to run in the conda root environment.
+
+Install other `conda-bundle` deps on that environment:
 
 ```
 make deps
