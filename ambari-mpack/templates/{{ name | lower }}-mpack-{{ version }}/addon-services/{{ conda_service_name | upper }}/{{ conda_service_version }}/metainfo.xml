@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>{{ conda_service_name | upper }}</name>
+            <version>{{ conda_service_version }}</version>
+            <extends>common-services/{{ conda_service_name | upper }}/{{ conda_service_version }}</extends>
+        </service>
+    </services>
+</metainfo>

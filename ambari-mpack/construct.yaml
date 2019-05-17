@@ -1,0 +1,20 @@
+name: hyperconda
+version: 4.0.0
+
+channels:
+  - http://repo.continuum.io/pkgs/free
+  - http://conda.anaconda.org/conda-forge
+  - http://conda.anaconda.org/danielfrg
+
+specs:
+  - python 3.5*
+  # - conda
+  # - anaconda
+  # - pyspark
+  # - nltk-with-data
+  # - spacy
+  # - spacy-en_core_web_sm
+  # - spacy-es_core_web_md
+  # - apache-livy
+  # - r
+  # - r-essentials

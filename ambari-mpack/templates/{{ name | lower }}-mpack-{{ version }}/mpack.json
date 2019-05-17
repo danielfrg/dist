@@ -1,0 +1,51 @@
+{
+  "type": "full-release",
+  "name": "{{ name | lower }}-ambari-mpack",
+  "version": "{{ version }}",
+  "description": "Ambari Management Pack for conda",
+  "prerequisites": {
+    "min-ambari-version": "{{ min_ambari_version }}",
+    "min-stack-versions": [
+      {
+        "stack_name": "HDP",
+        "stack_version": "2.3.0"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "name": "{{ name | lower }}-common-services",
+      "type" : "service-definitions",
+      "source_dir" : "common-services"
+    },
+    {
+      "name" : "{{ name | lower }}-addon-services",
+      "type" : "stack-addon-service-definitions",
+      "source_dir": "addon-services",
+      "service_versions_map": [
+        {
+          "service_name" : "{{ conda_service_name | upper }}",
+          "service_version" : "{{ conda_service_version }}",
+          "applicable_stacks" : [
+            {
+              "stack_name" : "HDP",
+              "stack_version" : "2.3"
+            },
+            {
+              "stack_name" : "HDP",
+              "stack_version" : "2.4"
+            },
+            {
+              "stack_name" : "HDP",
+              "stack_version" : "2.5"
+            },
+            {
+              "stack_name" : "HDP",
+              "stack_version" : "2.6"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

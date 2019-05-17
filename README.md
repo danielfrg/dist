@@ -26,3 +26,8 @@ make dist
 tar -xzf bundle.tar.gz
 CONDA_DIR=/opt/conda bash bundle/install
 ```
+
+## TODO
+
+Cloudera Parcel and Amabari Mpack need to be updated to the new structure
+

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>{{ conda_service_name | upper }}</name>
+            <displayName>{{ name }}</displayName>
+            <comment>{{ name }}</comment>
+            <version>{{ conda_service_version }}</version>
+            <components>
+                <component>
+                  <name>CONDA_PYTHON_CLIENT</name>
+                  <displayName>Python</displayName>
+                  <category>CLIENT</category>
+                  <cardinality>1+</cardinality>
+                  <commandScript>
+                    <script>scripts/ambari/client.py</script>
+                    <scriptType>PYTHON</scriptType>
+                    <timeout>5000</timeout>
+                  </commandScript>
+                </component>
+            </components>
+            <osSpecifics>
+              <osSpecific>
+                <osFamily>redhat6</osFamily>
+                <packages>
+                  <package><name>bzip2-devel</name></package>
+                </packages>
+              </osSpecific>
+            </osSpecifics>
+        </service>
+    </services>
+</metainfo>
