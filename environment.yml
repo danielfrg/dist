@@ -1,0 +1,35 @@
+name: dist
+dependencies:
+- ipython
+- notebook
+- jupyterlab
+- numpy
+- scipy
+- pandas
+- statsmodels
+- pyarrow
+- matplotlib
+- seaborn
+- plotly
+- bokeh
+- pydot
+- scikit-learn
+- lightgbm
+- tensorflow
+- tensorboard
+- keras
+- nltk
+- spacy
+- gensim
+- scrapy
+- beautifulsoup4
+- pip:
+    - poetry
+    - ipdb
+    - pyspark
+    - torch
+    - torchvision
+    - altair
+    - xgboost
+    - catboost
+    - eli5

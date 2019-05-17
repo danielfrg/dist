@@ -1,0 +1,4 @@
+[submodule "conda-bundle"]
+	path = conda-bundle
+	url = https://github.com/minrk/conda-bundle.git
+	branch = master
