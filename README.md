@@ -4,7 +4,17 @@ Do not use, ok maybe, works great but good luck. Only the best data science pack
 
 Dependencies are in `environment.yml`.
 
-## Dependencies
+## Install
+
+```
+tar -xzf bundle.tar.gz
+cd bundle
+CONDA_DIR=/opt/conda ./install
+```
+
+## Building
+
+### Dependencies
 
 This needs to run in the conda root environment.
 
@@ -14,20 +24,12 @@ Install other `conda-bundle` deps on that environment:
 make deps
 ```
 
-## Build
+### Build
 
 ```
 make dist
 ```
 
-## Install
-
-```
-tar -xzf bundle.tar.gz
-CONDA_DIR=/opt/conda bash bundle/install
-```
-
 ## TODO
 
 Cloudera Parcel and Amabari Mpack need to be updated to the new structure
-
